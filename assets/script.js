@@ -1,6 +1,6 @@
 const candidatos = [
     {
-       img:"",
+       img:"./assets/retrato-de-um-empresario-afro-americano-senior-confiante-em-terno-ceo-com-oculos-e-bracos-cruzados_777271-16302.jpg",
        name:"Teago",
        profession:"engenheiro de software",
        birth:"07/07/1977",
@@ -8,15 +8,15 @@ const candidatos = [
        email:"Teago1227@gmail.com",
     },
     {
-        img:"https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffotos-premium%2Fcara-afro-americano-alegre-segurando-smartphone-e-sorrindo_116547-16838.jpg&tbnid=5rqyTYftlG9GdM&vet=12ahUKEwif46DzisyBAxVmBbkGHejmBf4QMygdegQIARBx..i&imgrefurl=https%3A%2F%2Fbr.freepik.com%2Ffotos%2Fpessoa-telefone&docid=s71S19vRkKyrFM&w=626&h=417&itg=1&q=fotos%20de%20pessoas&hl=pt-BR&ved=2ahUKEwif46DzisyBAxVmBbkGHejmBf4QMygdegQIARBx",
+        img:"https://img.freepik.com/fotos-premium/a-man-in-a-suit-and-tie_777078-40692.jpg?w=360",
        name:"Fernado",
        profession:"Prgramador Backend",
        birth:"23/06/1995",
        phone:"(31) 997628732",
-       email:"Fernando20c@gmail.com",
+       email:"Fernando20@gmail.com",
     },
     {
-        img:"",
+        img:"./assets/retrato-corporativo-foto-perfil-profissional-foto-linkedin-g98m.webp",
        name:"Amanda",
        profession:"Designer grafica",
        birth:"12/02/2001",
@@ -36,7 +36,7 @@ const email =document.querySelector("#email")
 let choice = 0
 
 function changePerfil(indece) {
-    image.src = candidatos[indece].image
+    image.src = candidatos[indece].img
     nome.innerText = candidatos[indece].name
     profissao.innerText = candidatos[indece].profession
     nascimento.innerText = candidatos[indece].birth
