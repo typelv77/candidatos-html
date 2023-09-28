@@ -23,7 +23,7 @@ const candidatos = [
        phone:"(11) 9997213621",
        email:"amnaadasantos2001@gmail.com",
     },
-
+   
 ];
 
 const image=document.querySelector("img")
