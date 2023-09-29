@@ -2,7 +2,7 @@ const candidatos = [
     {
        img:"./assets/retrato-de-um-empresario-afro-americano-senior-confiante-em-terno-ceo-com-oculos-e-bracos-cruzados_777271-16302.jpg",
        name:"Teago",
-       profession:"engenheiro de software",
+       profession:"Engenheiro de Software",
        birth:"07/07/1977",
        phone:"(27) 994263879",
        email:"Teago1227@gmail.com",
@@ -10,7 +10,7 @@ const candidatos = [
     {
         img:"https://img.freepik.com/fotos-premium/a-man-in-a-suit-and-tie_777078-40692.jpg?w=360",
        name:"Fernado",
-       profession:"Prgramador Backend",
+       profession:"Programador Backend",
        birth:"23/06/1995",
        phone:"(31) 997628732",
        email:"Fernando20@gmail.com",
@@ -32,6 +32,8 @@ const profissao=document.querySelector("#profissao")
 const nascimento=document.querySelector("#nascimento")
 const telefone=document.querySelector("#telefone")
 const email =document.querySelector("#email")
+const modalNewCandidato = document.querySelector('#modal');
+const overFlow = document.querySelector('overflow');
 
 let choice = 0
 
@@ -61,4 +63,14 @@ function beforePerfil() {
         choice--
     }
     changePerfil(choice)
+}
+
+function closeModal(){
+    modalNewCandidato.style.display="none";
+    overFlow.style.display = "none";
+}
+
+function openModal(){
+    modalNewCandidato.style.display ="block";
+    overFlow.style.display = "black"
 }

@@ -12,7 +12,7 @@
     </header>
 
 <main>
-    <section id="cadr">
+    <section id="card">
         <div id="div-img"> 
             <img src="https://s4.static.brasilescola.uol.com.br/be/conteudo/images/2-albert-einstein.jpg" alt="">
         </div>
@@ -28,16 +28,20 @@
 
         <div id="buttons">
            <button onclick="beforePerfil()"><</button>
-           <button>+</button>
+           <button onclick="openModal()">+</button>
            <button onclick="nextPerfil()">></button>
         </div>
 
     </section>
 
     <section id="modal">
-        <div>
-
+        <div id="head-modal">
             <h1>Adicionar novo candidato</h1>
+            <a onclick="closeModal()">&#10060</a>
+
+           </div>
+         <div id="man-modal">
+
             <form action="submit">
                 <fieldset>
                     <label for="link">link da imagens:</label>
@@ -73,8 +77,11 @@
     
             </form>
         </div>
-        <a>X</a>
+        
     </section>
+
+    <div id="overflow"></div>
+
 </main>
 
 <footer>

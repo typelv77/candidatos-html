@@ -18,7 +18,7 @@ header{
  align-items: center;
  justify-content: center;
  background-color: #8ebdb6;
- color: aliceblue;
+ color: rgb(255, 255, 255);
 }
 
 main{
@@ -39,7 +39,7 @@ main{
     justify-content: center;
     flex-direction: column;
     gap: 40px;
-    box-shadow: 5px 5px 5px 5px  #063940
+    box-shadow: 5px 5px 5px 5px  #75a0a8
 }
 
 img{
@@ -54,6 +54,24 @@ img{
     flex-direction: column;
 }
 
+p{
+    font-weight: 800;
+}
+
+span{
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+a:hover{
+    color: rgb(134, 130, 130);
+}
+
 #buttons{
     display: flex;
     align-items: flex-start;
@@ -62,32 +80,93 @@ img{
 
 button{
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 25px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: pointer;
-    border-radius: 35px;
+}
+
+button:hover{
+    transition: 2ms;
+    background-color:  #447072
 }
 
 footer{
  width: 100%;
  height: 10%;
- color: aliceblue;
- padding: 10px;
  display: flex;
  align-items: center;
+ justify-content: center;
+ background-color: #407585b7;
 }
 
-button:hover{
-    transition: 2ms;
-    background-color:  #8ebdb6
+
+
+/* inicio modal */
+
+#overflow {
+    display: none;
+    z-index: 49;
+    width: 100%;
+    height: 100%;
+    background-color: #f8020269;
+    position: absolute;
 }
 
-a{
-    text-decoration: none;
-    color: #000000;
+#modal{
+    display: none;
+    z-index: 50;
+    position: absolute;
+    background-color: #f8f8f8;
+    border-radius: 10px;
 }
 
-a:hover{
-    color: rgb(134, 130, 130);
+
+#head-modal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #5c5757;
+    border-radius: 10px 10px 0 0;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    font-size: 13px;
+    
 }
+
+#man-modal > form{
+    background-color: #75a0a8;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#man-modal > form > button{
+    align-self: center;
+}
+
+#input-date{
+    width: auto;
+}
+
+fieldset {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    padding: 8px;
+    border: none
+}
+
+input {
+    padding: 5px;
+}
+
+#input-date{
+    width: 169px;
+}
+
+
+
+/* final */
