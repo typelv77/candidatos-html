@@ -26,23 +26,31 @@ const candidatos = [
    
 ];
 
-const image=document.querySelector("img")
-const nome=document.querySelector("#nome")
-const profissao=document.querySelector("#profissao")
-const nascimento=document.querySelector("#nascimento")
-const telefone=document.querySelector("#telefone")
-const email =document.querySelector("#email")
-const modalNewCandidato = document.querySelector('#modal');
-const overFlow = document.querySelector('overflow');
+const image=document.querySelector("img");
+const nome=document.querySelector("#nome");
+const profissao=document.querySelector("#profissao");
+const nascimento=document.querySelector("#nascimento");
+const telefone=document.querySelector("#telefone");
+const email =document.querySelector("#email");
 
-let choice = 0
+const modalNewCandidato = document.querySelector('#modal');
+const overFlow = document.querySelector('#overflow');
+
+const inputimage = document.querySelector("#input-image");
+const inputnome = document.querySelector("#input-nome");
+const inputprofissão = document.querySelector("#input-profissão");
+const inputnascimento = document.querySelector("#input-nascimento");
+const inputtelefone = document.querySelector("#input-telefone");
+const inputemail = document.querySelector("#input-email");
+
+let choice = 0;
 
 function changePerfil(indece) {
-    image.src = candidatos[indece].img
-    nome.innerText = candidatos[indece].name
-    profissao.innerText = candidatos[indece].profession
-    nascimento.innerText = candidatos[indece].birth
-    email.innerText = candidatos[indece].email
+    image.src = candidatos[indece].img;
+    nome.innerText = candidatos[indece].name;
+    profissao.innerText = candidatos[indece].profession;
+    nascimento.innerText = candidatos[indece].birth;
+    email.innerText = candidatos[indece].email;
 }
 
 function nextPerfil() {
@@ -54,7 +62,7 @@ function nextPerfil() {
     }
     changePerfil(choice)
 
-}
+};
 
 function beforePerfil() {
     if (choice === 0 ){
@@ -63,14 +71,30 @@ function beforePerfil() {
         choice--
     }
     changePerfil(choice)
-}
+};
 
 function closeModal(){
     modalNewCandidato.style.display="none";
     overFlow.style.display = "none";
-}
+};
 
 function openModal(){
     modalNewCandidato.style.display ="block";
-    overFlow.style.display = "black"
+    overFlow.style.display = "block";
+};
+
+function addNewCandidato(){
+ const addNewCandidato = {
+
+    img: inputimage.value,
+    name: inputnome.value,
+    profession:inputprofissão.value,
+    birth: inputnascimento.value,
+    phone:inputtelefone.value,
+    email: inputemail.value
+ }
+
+candidatos.push(addNewCandidato); //adiciona um novo objeto ao fim da arry
+
+closeModal()
 }
